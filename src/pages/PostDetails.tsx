@@ -106,7 +106,7 @@ export default function PostDetails() {
       {/* Comment Form */}
       <div className="space-y-4 bg-white/10 p-6 rounded-xl border border-white/30 shadow-lg backdrop-blur-sm">
         <h2 className="text-2xl font-bold text-white flex items-center gap-2">
-          <MessageSquare size={20} /> 💬 Add a Comment
+          <MessageSquare size={20} /> Add a Comment
         </h2>
         <form onSubmit={handleSubmit} className="space-y-4">
           <input

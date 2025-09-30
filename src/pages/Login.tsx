@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -20,8 +21,9 @@ export default function Login({ onAuth }: { onAuth: () => void }) {
       onAuth();
       navigate("/");
     } catch (err: any) {
-      alert(" Login failed: " + (err.response?.data?.message || err.message));
-    }
+  alert("Login failed. Please check your username and password.");
+}
+
   };
 
   return (
@@ -34,7 +36,7 @@ export default function Login({ onAuth }: { onAuth: () => void }) {
 
         <div className="relative z-10  ">
           <h2 className="text-3xl font-extrabold mb-6 text-center bg-clip-text text-transparent text-gradient flex items-center justify-center gap-2">
-            <User size={28} /> Welcome Back
+            <User size={28} /> Welcome Register Here or login
           </h2>
 
           <form onSubmit={handleSubmit} className="space-y-5  ">

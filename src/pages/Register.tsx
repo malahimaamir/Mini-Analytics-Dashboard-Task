@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -23,10 +24,10 @@ export default function Register({ onAuth }: { onAuth: () => void }) {
       onAuth();
       navigate("/");
     } catch (err: any) {
-      alert(
-        " Registration failed: " + (err.response?.data?.message || err.message)
-      );
-    }
+  alert("Registration failed. Please try again with different credentials.");
+}
+
+
   };
 
   return (
